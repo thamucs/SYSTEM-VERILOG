@@ -1,0 +1,135 @@
+--------------------PRINTING 122122122---------------------------
+/*class baby;
+rand bit [4:0]a[10];
+
+constraint hii{
+	foreach(a[i])
+		if(i%3==1||i%3==2)
+			a[i]==2;
+		else
+			a[i]==1;
+		}
+	endclass 
+
+module hi;
+baby b;
+initial begin
+	b=new();	
+	if(b.randomize())begin
+		$display("%p",b.a);
+	end
+	else 
+		$display("error in randomization");
+end
+endmodule */
+-----------------PRINTING 01020304050607----------------------
+/*class random;
+	rand bit [7:0]a[10];
+
+	constraint hii{
+		foreach(a[i])
+			if(i%2==0)
+				a[i]==0;
+			else
+				a[i]==(i+2)/2;
+			}
+		endclass
+
+module hi;
+random r;
+initial begin
+	r=new();
+	r.randomize();
+	$display("%0p",r.a);
+end
+endmodule*/
+-------------------PRINTING 1122334455-----------------
+/*class printing_double;
+	rand int a[10];
+	constraint gg{
+		foreach(a[i])
+			a[i]==(i+2)/2;
+		}
+	endclass
+module hi;
+printing_double p;
+initial begin
+	p=new();
+	p.randomize();
+	$display("%0p",p.a);
+end
+endmodule*/
+
+-----------------PRINTING 5 -10 15 -20 25 -30---------------------------
+
+/*class baby;
+	rand int a[];
+	constraint a_size{a.size==7;}
+
+	constraint fivth_table{
+		foreach(a[i])
+			if(i%2==0)
+				a[i]==5*(i+1);
+			else
+				a[i]==-5*(i+1);
+			}
+		endclass
+module hi;
+baby b;
+initial begin
+	b=new();
+	b.randomize();
+	$display("%0p",b.a);
+end
+endmodule*/
+
+-------------------PRINTING 9 19 29 39 49 59 69 79 -----------------------------
+
+/*class baby;
+	rand int a[];
+	
+	constraint rr{a.size==14;}
+
+	constraint bb{
+		foreach(a[i])
+			if(i%2==0)
+				a[i]==9;
+			else
+				a[i]==(i+2)/2;
+			}
+endclass
+
+module hi;
+baby b;
+initial begin
+	b=new();
+	b.randomize();
+	$display("%0p",b.a);
+end
+endmodule */
+
+-------------------------PRINTING 0101010101010101-----------------------------
+
+/*class baby;
+	rand int a[];
+
+	constraint rr{a.size==10;}
+
+	constraint gg{
+		foreach(a[i])
+			if(i%2==0)
+				a[i]==0;
+			else
+				a[i]==1;
+			}
+		endclass
+module hi;
+baby b;
+initial begin
+	b=new();
+	b.randomize();
+	$display("%0p",b.a);
+end
+endmodule */
+
+
